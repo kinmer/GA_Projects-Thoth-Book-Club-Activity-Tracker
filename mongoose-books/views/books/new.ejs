@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<h2>Enter a New Book</h2>
+<form action="/books" method="POST">
+    <label>Title:
+        <input type="text" name="title">
+    </label><br>
+    <label>Author:
+        <input type="text" name="author">
+    </label><br>
+    <label>Publisher:
+        <input type="text" name="publisher">
+    </label><br>
+    <label>PublishYear:
+        <input type="number" name="publishYear">
+    </label><br>
+    <label>ISBN:
+        <input type="text" name="ISBN">
+    </label><br>
+    <label>Customer Rating:
+        <select name="customerRating">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            </select>
+    </label><br>
+    <button type="submit">Add Book</button>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
