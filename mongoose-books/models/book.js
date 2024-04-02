@@ -11,10 +11,7 @@ const bookSchema = new Schema({
                         } 
         },
         ISBN: { type: String },
-        customerRating: { 
-            type: Number,
-            enum:[1, 2, 3, 4, 5] 
-         },
+
     } , {
         timestamps: true
     });
