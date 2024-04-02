@@ -1,13 +1,21 @@
 const Book = require('../models/book');
 
-const newBook = (req, res) => {
-    res.render('books/new', {errorMsg: ''});
-}
 
 const index = async(req, res) => {
     const books = await Book.find({});
-    res.render('books/index', { books });
+    res.render('books/index', { title: 'All Books',books });
 }
+
+
+const show = async(req, res) => {
+    const book = await Book.findById(req.params.id);
+    res.render('books/show', { title: 'Book Detail', book })
+}
+
+const newBook = (req, res) => {
+    res.render('books/new', { title: 'Add Book',errorMsg: '' });
+}
+
 
 const create = async(req, res) => {
     for (let key in req.body) {
@@ -22,10 +30,9 @@ const create = async(req, res) => {
     }
 }
 
-
-
 module.exports = {
     new: newBook, 
+    show,
     index, 
     create
   };

@@ -1,4 +1,5 @@
 <%- include('../partials/header') %>
+
 <section id="show-page">
     <div>Title: </div>
     <div><%= book.title %></div>
@@ -30,7 +31,7 @@
     <input type="submit" value="Add Review">
 </form>
 
-<% if (movie.reviews.length) { %>
+<% if (book.reviews) { %>
     <table>
         <thead>
             <tr>
@@ -40,17 +41,17 @@
             </tr>
         </thead>
         <tbody>
-            <% book.reviews.forEach(b => { %>
+            <% book.reviews.forEach(r => { %>
                 <tr>
-                    <td><%= r.createdAt.toLocaleDateString() %></td>
-                    <td><%= r.content %></td>
-                    <td><%= r.rating %></td>
+                  <td><%= r.createdAt.toLocaleDateString() %></td>
+                  <td><%= r.content %></td>
+                  <td><%= r.rating %></td>
                 </tr>
             <% }); %>
         </tbody>
     </table>
 <% } else { %>
-    <h5>No Reviews Yet</h5>
+    <h5>No Reviews</h5>
 <% } %>
   
 <%- include('../partials/footer') %>
