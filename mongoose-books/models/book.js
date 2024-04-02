@@ -21,13 +21,3 @@ const bookSchema = new Schema({
 
 module.exports = mongoose.model('Book', bookSchema);
 
-
-// const Book = require('./models/book')
-
-// Book.create({
-//     title: 'The Fire Next Time',
-//         author: 'James Baldwin',
-//         publisher: 'Modern Library',
-//         publishYear: 2021,
-//         ISBN: '978-0679601517',
-//         customerRating: 4}).then(console.log)
