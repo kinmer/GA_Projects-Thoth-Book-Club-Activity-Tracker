@@ -18,6 +18,8 @@ const newBook = (req, res) => {
 
 
 const create = async(req, res) => {
+    req.body.author = req.body.author.trim();
+    if (req.body.author) req.body.author = req.body.author.split(/\s*,\s*/);
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }
