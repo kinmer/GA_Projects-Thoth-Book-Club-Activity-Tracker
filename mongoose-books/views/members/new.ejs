@@ -1,7 +1,11 @@
 <%- include('../partials/header') %>
 <section id="badge-container">
     <% members.forEach( m => { %>
-        <article class="badge"><%= m.name %></article>
+        <article class="badge">
+            <span><%= m.name %></span>
+            &nbsp;|&nbsp;
+            <span><%= m.profession %></span>
+        </article>
     <% }) %>
 </section>
 

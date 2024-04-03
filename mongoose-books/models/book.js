@@ -27,10 +27,10 @@ const bookSchema = new Schema({
         },
         ISBN: { type: String },
         reviews: [reviewSchema],
-        // member: [{
-        //     type: Schema.Types.ObjectId,
-        //     ref: 'Member'
-        // }]
+        group: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Member'
+        }]
 
     } , {
         timestamps: true
