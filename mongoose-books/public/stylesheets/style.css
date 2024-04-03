@@ -1,49 +1,49 @@
-/* style.css */
-
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: #fef3d4; /* Light beige background */
-  color: #330000; /* Dark brown text color */
-}
-
-nav {
-  background-color: #452c14; /* Dark brown navigation background */
-  padding: 10px;
+  background-color: #f2eada; /* Sand color */
+  color: #2c241f; /* Dark brown text */
+  padding: 20px;
 }
 
 nav a {
-  color: #f2e8cf; /* Light beige navigation text color */
   text-decoration: none;
-  margin-right: 10px;
+  color: #2c241f;
+  font-weight: bold;
 }
 
-section#show-page {
+nav a:hover {
+  text-decoration: underline;
+}
+
+#show-page {
   margin-top: 20px;
   padding: 20px;
-  background-color: #ffd700; /* Gold background for book details */
-  border: 5px solid #452c14; /* Dark brown border */
-  position: relative;
+  background-color: #ffefd5; /* Light yellow */
+  border: 2px solid #e1c48e; /* Border color */
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-section#show-page::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
-  background-image: url('sphinx.png'); /* Replace with your Sphinx image */
-  background-size: cover;
-}
-
-section#show-page div {
+#show-page div {
   margin-bottom: 10px;
+  flex: 0 0 calc(50% - 10px); /* Two columns with 10px spacing */
 }
 
 h2 {
-  color: #452c14; /* Dark brown header text color */
-  text-align: center;
+  font-size: 24px;
+  color: #2c241f;
+}
+
+form label {
+  font-weight: bold;
+  color: #2c241f;
+}
+
+form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 table {
@@ -53,55 +53,34 @@ table {
 }
 
 table th, table td {
-  border: 1px solid #452c14; /* Dark brown border for table cells */
+  border: 1px solid #2c241f;
   padding: 8px;
-  text-align: left;
 }
 
 table th {
-  background-color: #ffd700; /* Gold background for table headers */
-  color: #452c14; /* Dark brown text color for table headers */
+  background-color: #e1c48e; /* Light brown */
+  color: #2c241f;
+  font-weight: bold;
 }
 
-table tr:nth-child(even) {
-  background-color: #fef3d4; /* Light beige background for even table rows */
+table tbody tr:nth-child(even) {
+  background-color: #ffe4b5; /* Light orange */
 }
 
-#add-review-form {
-  margin-top: 20px;
-}
-
-#add-review-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-#add-review-form textarea, #add-review-form select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-}
-
-#add-review-form input[type="submit"] {
-  background-color: #452c14; /* Dark brown submit button background */
-  color: #f2e8cf; /* Light beige submit button text color */
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-#add-review-form input[type="submit"]:hover {
-  background-color: #330000; /* Darker brown hover color */
+table tbody tr:hover {
+  background-color: #ffd700; /* Gold */
 }
 
 h5 {
-  color: #452c14; /* Dark brown text color for "No Reviews" message */
+  color: #2c241f;
 }
 
-.eye-of-horus {
-  width: 50px;
-  height: 50px;
-  background-image: url('eye-of-horus.png'); /* Replace with your Eye of Horus icon */
-  background-size: contain;
-  background-repeat: no-repeat;
+/* Styling for title and content on the same line */
+#show-page div:nth-child(odd) {
+  font-weight: bold;
+  flex-basis: 100%;
+}
+
+#show-page div:nth-child(even) {
+  margin-left: 10px; /* Adjust margin as needed */
 }
