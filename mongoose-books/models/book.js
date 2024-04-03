@@ -26,7 +26,11 @@ const bookSchema = new Schema({
                         } 
         },
         ISBN: { type: String },
-        reviews: [reviewSchema]
+        reviews: [reviewSchema],
+        member: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Member'
+        }]
 
     } , {
         timestamps: true
