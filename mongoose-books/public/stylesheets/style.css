@@ -1,8 +1,107 @@
+/* style.css */
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fef3d4; /* Light beige background */
+  color: #330000; /* Dark brown text color */
 }
 
-a {
-  color: #00B7FF;
+nav {
+  background-color: #452c14; /* Dark brown navigation background */
+  padding: 10px;
+}
+
+nav a {
+  color: #f2e8cf; /* Light beige navigation text color */
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+section#show-page {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffd700; /* Gold background for book details */
+  border: 5px solid #452c14; /* Dark brown border */
+  position: relative;
+}
+
+section#show-page::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background-image: url('sphinx.png'); /* Replace with your Sphinx image */
+  background-size: cover;
+}
+
+section#show-page div {
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #452c14; /* Dark brown header text color */
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #452c14; /* Dark brown border for table cells */
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #ffd700; /* Gold background for table headers */
+  color: #452c14; /* Dark brown text color for table headers */
+}
+
+table tr:nth-child(even) {
+  background-color: #fef3d4; /* Light beige background for even table rows */
+}
+
+#add-review-form {
+  margin-top: 20px;
+}
+
+#add-review-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#add-review-form textarea, #add-review-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#add-review-form input[type="submit"] {
+  background-color: #452c14; /* Dark brown submit button background */
+  color: #f2e8cf; /* Light beige submit button text color */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#add-review-form input[type="submit"]:hover {
+  background-color: #330000; /* Darker brown hover color */
+}
+
+h5 {
+  color: #452c14; /* Dark brown text color for "No Reviews" message */
+}
+
+.eye-of-horus {
+  width: 50px;
+  height: 50px;
+  background-image: url('eye-of-horus.png'); /* Replace with your Eye of Horus icon */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
