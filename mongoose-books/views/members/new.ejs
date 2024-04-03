@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<section id="badge-container">
+    <% members.forEach( m => { %>
+        <article class="badge"><%= m.name %></article>
+    <% }) %>
+</section>
+
+<form id="add-member-form" action="/members" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Born:</label>
+    <input type="date" name="born">
+    <label>Profession:</label>
+    <input type="text" name="profession">
+    <input type="submit" value="Add Member">
+</form>
+
+<%- include('../partials/footer') %>
