@@ -26,7 +26,6 @@ const create = async(req, res) => {
     res.redirect('/members/new');
 } 
 
-
 module.exports = {
   new: newMember,
   create,
