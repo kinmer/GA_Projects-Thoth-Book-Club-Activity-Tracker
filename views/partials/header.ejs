@@ -9,10 +9,16 @@
 </head>
 <body>
     <nav>
+        <a href="/books">All Books</a>
+        <% if (user) { %>
+        &nbsp;|&nbsp;
         <a href="/books/new" >New Book</a>
         &nbsp;|&nbsp;
-        <a href="/books">All Books</a>
-        &nbsp;|&nbsp;
         <a href="/members/new">New Member</a>
+        &nbsp;|&nbsp;
+        <a href="/logout">LOG OUT</a>
+            <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+            <% } %>
     </nav>
   
