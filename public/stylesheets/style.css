@@ -1,8 +1,17 @@
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: #f2eada; /* Sand color */
-  color: #2c241f; /* Dark brown text */
+  background-color: #f2eada; 
+  color: #2c241f; 
   padding: 20px;
+  
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #2c241f;
 }
 
 nav {
@@ -23,7 +32,7 @@ nav a.login {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 20px;
 }
 
@@ -33,8 +42,8 @@ nav a.login {
 
 #show-page {
   padding: 20px;
-  background-color: #ffefd5; /* Light yellow */
-  border: 2px solid #e1c48e; /* Border color */
+  background-color: #ffefd5; 
+  border: 2px solid #e1c48e; 
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -66,7 +75,7 @@ form select {
 }
 
 form input[type="submit"] {
-  background-color: #e1c48e; /* Light brown */
+  background-color: #e1c48e; 
   color: #2c241f;
   border: none;
   padding: 10px 20px;
@@ -74,7 +83,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #d0b37a; /* Darker brown */
+  background-color: #d0b37a; 
 }
 
 table {
@@ -89,17 +98,17 @@ table th, table td {
 }
 
 table th {
-  background-color: #e1c48e; /* Light brown */
+  background-color: #e1c48e; 
   color: #2c241f;
   font-weight: bold;
 }
 
 table tbody tr:nth-child(even) {
-  background-color: #ffe4b5; /* Light orange */
+  background-color: #ffe4b5; 
 }
 
 table tbody tr:hover {
-  background-color: #ffd700; /* Gold */
+  background-color: #ffd700; 
 }
 
 h5 {
@@ -107,5 +116,34 @@ h5 {
 }
 
 
+.img-background-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px; 
+  z-index: -1; 
+}
 
+.join-button {
+  background-color: #EFAE3D; 
+  border: none;
+  color: #2C3E50; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px; 
+  margin: 20px 10px; 
+  cursor: pointer; 
+  border-radius: 8px; 
+  border: 2px solid #EFAE3D; 
+  font-family: 'Times New Roman', serif; 
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+}
 
+.join-button:hover {
+  background-color: #FFD700; 
+}
