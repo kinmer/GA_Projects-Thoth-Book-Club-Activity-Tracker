@@ -4,10 +4,8 @@ const Book = require('../models/book');
 const addToGroup = async(req, res) => {
     const members = await Member.find({})
     const book = await Book.findById(req.params.id);
-    // console.log(req.body.memberId);
     book.group.push(req.body.memberId);
     await book.save();
-    // console.log(book);
     res.redirect(`/books/${book._id}`, members, book);
 }
 
