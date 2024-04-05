@@ -117,7 +117,7 @@ h5 {
 
 
 .img-background-footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -146,4 +146,15 @@ h5 {
 
 .join-button:hover {
   background-color: #FFD700; 
+}
+
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
 }
