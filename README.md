@@ -40,4 +40,3 @@ The Book Club Activity Tracker is a comprehensive application designed to stream
 ## Work Flow
 [Trello Board](https://trello.com/invite/b/VT3zQvOi/ATTIabb9b0a75ac06aed9bcb2229be18ba3fF2444C62/thoth-book-club-activity-tracker)
 
-# add a note
